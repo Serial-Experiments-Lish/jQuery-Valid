@@ -6,7 +6,7 @@ $(document).ready(function() {
         const messageArea = $("#message-area");
         const required = [name, email, phone];
     
-        for(i=0; i < required.length; i++) {
+        for(i=0; i < required.length; i++) {       //Conditions to check if entry fields are empty.
             if(required[i].val() === "") {
                 $("#message").addClass("warning").html("<em>Please Fill Out Required Fields</em>");
                 $("label").addClass("warning");
@@ -15,7 +15,7 @@ $(document).ready(function() {
                 $("label").removeClass("warning");
                 }
     };
-        if($("label") != $(".warning")) {
+        if($("label") != $(".warning")) {    //Conditions to complete the form.
             $("form").remove();
             $("h2").html('<em>Thanks for your feedback!</em>');}
         });
